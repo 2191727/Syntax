@@ -1989,6 +1989,8 @@ input, select, textarea {
 					color: #fff;
 				}
 
+
+
 	.dropotron {
 		background: #fff;
 		letter-spacing: 0.025em;
@@ -2661,17 +2663,12 @@ input, select, textarea {
 				margin-bottom: 1em !important;
 			}
 
-		.bg-img {
-			/* The image used */
-			background-image: url("images\header.jpg");
-			min-height: 380px;
-			/* Center and scale the image nicely */
-			background-position: center;
-			background-repeat: no-repeat;
+		.bg-image {
+			background-image: url('images/header.jpg'); /* Replace with the actual path to your background image */
 			background-size: cover;
-			/* Needed to position the navbar */
-			position: relative;
+			background-position: center;
 		}
 
 
-	}
+}
+
