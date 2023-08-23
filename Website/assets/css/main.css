@@ -73,6 +73,7 @@ input, select, textarea {
 	}
 
 	html {
+		scroll-behavior: smooth;
 		box-sizing: border-box;
 	}
 
@@ -2151,6 +2152,7 @@ input, select, textarea {
 		/* Basic */
 
 			html, body {
+				scroll-behavior: smooth;
 				overflow-x: hidden;
 			}
 
