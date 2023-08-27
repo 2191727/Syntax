@@ -1771,10 +1771,11 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
+
 /* Box */
 
 	.box {
-		background: #fff;
+		background: #e1f3fa;
 		border-radius: 6px;
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 		padding: 2em;
@@ -1990,33 +1991,37 @@ input, select, textarea {
 					color: #fff;
 				}
 
+/* Slideshow */
+	
+
 /* Style the dropdown submenu */
-#nav #dropdown ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: none;
-    border-top: 2px solid #fff;
-    z-index: 1;
-}
+	#nav #dropdown ul {
+    	display: none;
+		position: absolute;
+    	top: 100%;
+    	left: 0;
+    	background-color: none;
+    	border-top: 2px solid #3aa6ff86;
+    	z-index: 1;
+	}
 
-#nav #dropdown:hover > ul {
-    display: block;
-}
+	#nav #dropdown:hover > ul {
+    	display: block;
+	}
 
-#nav #dropdown ul li {
-    width: 100%;
-}
+	#nav #dropdown ul li {
+    	width: 100%;
+	}
 
-#nav #dropdown ul li a {
-    padding: 10px 20px;
-    color: #fff;
-}
+	#nav #dropdown ul li a {
+    	padding: 10px 20px;
+    	color: #555;
+	}
 
-#nav #dropdown ul li a:hover {
-    background-color: #555;
-}
+	#nav #dropdown ul li a:hover {
+    	background-color: #555;
+		color: #ffffff;
+	}
 
 /* Banner */
 
