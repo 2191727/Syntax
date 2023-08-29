@@ -108,6 +108,8 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+	
+
 	input, select, textarea {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13pt;
@@ -194,6 +196,37 @@ input, select, textarea {
 		max-width: 100%;
 		width: 1400px;
 	}
+
+	.member-container {
+		display: flex;
+		justify-content: space-between; 
+		align-items: flex-start; 
+		margin: 20px; 
+	}
+	.member {
+		width: calc(50% - 10px); 
+		padding: 10px;
+		text-align: center;
+	}
+	.member img {
+		max-width: 200px;
+		height: 200px;
+		margin-bottom: 10px;
+		border-radius: 50%;
+	}
+
+	.member text{
+		text-align: center;
+	}
+	.member h3 {
+  		margin: 0;
+  		font-size: 1.2rem;
+	}
+
+	.member p {
+ 		margin: 0;
+	}
+	  
 
 		@media screen and (max-width: 1680px) {
 
@@ -1479,6 +1512,10 @@ input, select, textarea {
 		margin: 2.5em 0 0 0;
 	}
 
+/*2x2 pictures*/
+
+
+
 /* Forms */
 
 	form label {
@@ -1599,6 +1636,11 @@ input, select, textarea {
 			width: 100%;
 			margin: 0 0 2.5em 0;
 		}
+		.image.members{
+			display: flex;
+			width: 20%;
+			margin: 0 0 2.5em 0;
+		}
 
 		.image.left {
 			float: left;
@@ -1614,6 +1656,7 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
+
 
 /* Button */
 
@@ -1800,6 +1843,7 @@ input, select, textarea {
 				position: relative;
 				margin: 0;
 			}
+
 
 				.box.feature .image img {
 					border-bottom-left-radius: 0;
