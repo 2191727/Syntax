@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Website"
+    "\\Website",
+    "\\Website\\assets",
+    "\\Website\\assets\\css"
   ],
   "SelectedNode": "\\Website\\syntax-foundation.html",
   "PreviewInSolutionExplorer": false

@@ -6,17 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<style>
-    .bigpic {
-        position: relative;
-        width: 100%;
-        height: 1000px;
-        display: block;
-        background: url('images/cover16.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-</style>
+
 <body class="is-preload right-sidebar">
     <div id="page-wrapper">
 
@@ -49,7 +39,227 @@
                     </ul>
                 </nav>
 
+
             </header>
+
+            <style>
+                .bigpic {
+                    position: relative;
+                    width: 100%;
+                    height: 1000px;
+                    display: block;
+                    background: url('images/cover16.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+
+
+                .slider {
+                    width: 500px;
+                    height: 320px;
+                    background-color: black;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0px;
+                    text-align: center;
+                    overflow: hidden;
+                }
+
+                .image-container {
+                    width: 1500px;
+                    background-color: pink;
+                    height: 310px;
+                    clear: both;
+                    position: relative;
+                    -webkit-transition: left 2s;
+                    -moz-transition: left 2s;
+                    -o-transition: left 2s;
+                    transition: left 2s;
+                }
+
+                .slide {
+                    float: left;
+                    margin: 0px;
+                    padding: 0px;
+                    position: relative;
+                }
+
+                #slide-1:target ~ .image-container {
+                    left: 0px;
+                }
+
+                #slide-2:target ~ .image-container {
+                    left: -500px;
+                }
+
+                #slide-3:target ~ .image-container {
+                    left: -1000px;
+                }
+
+                .buttons {
+                    position: relative;
+                    top: -20px;
+                }
+
+                    .buttons a {
+                        display: inline-block;
+                        height: 15px;
+                        width: 15px;
+                        border-radius: 50px;
+                        background-color: lightgreen;
+                    }
+                /* 3D Slideshow */
+
+
+                #slideshow {
+                    margin: 0 auto;
+                    padding-top: 50px;
+                    height: 600px;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .sub-heading {
+                    padding-top: 50px;
+                    font-size: 18px;
+                }
+
+                .sub-heading-two {
+                    font-size: 15px;
+                }
+
+                .sub-heading-three {
+                    font-size: 13px;
+                }
+
+                .sub-heading-four {
+                    font-size: 11px;
+                }
+
+                .sub-heading-five {
+                    font-size: 9px;
+                }
+
+                .sub-heading-six {
+                    font-size: 7px;
+                }
+
+                .sub-heading-seven {
+                    font-size: 5px;
+                }
+
+                .sub-heading-eight {
+                    font-size: 3px;
+                }
+
+                .sub-heading-nine {
+                    font-size: 1px;
+                }
+
+                /* ... (other styles) ... */
+
+                .entire-content {
+                    margin: auto;
+                    width: 190px;
+                    perspective: 1000px;
+                    position: relative;
+                    padding-top: 80px;
+                }
+
+                .content-carrousel {
+                    width: 100%;
+                    position: absolute;
+                    float: right;
+                    animation: rotar 15s infinite linear;
+                    transform-style: preserve-3d;
+                    /* Add the following line to apply the animation */
+                    animation: rotar 15s infinite linear;
+                }
+
+
+                    .content-carrousel:hover {
+                        animation-play-state: paused;
+                        cursor: pointer;
+                    }
+
+                    .content-carrousel figure {
+                        width: 100%;
+                        height: 120px;
+                        border: 1px solid #3b444b;
+                        overflow: hidden;
+                        position: absolute;
+                    }
+
+                        .content-carrousel figure:nth-child(1) {
+                            transform: rotateY(0deg) translateZ(300px);
+                        }
+
+                        .content-carrousel figure:nth-child(2) {
+                            transform: rotateY(40deg) translateZ(300px);
+                        }
+
+                        .content-carrousel figure:nth-child(3) {
+                            transform: rotateY(80deg) translateZ(300px);
+                        }
+
+                        .content-carrousel figure:nth-child(4) {
+                            transform: rotateY(120deg) translateZ(300px);
+                        }
+
+                        .content-carrousel figure:nth-child(5) {
+                            transform: rotateY(160deg) translateZ(300px);
+                        }
+
+                        .content-carrousel figure:nth-child(6) {
+                            transform: rotateY(200deg) translateZ(300px);
+                        }
+
+                        .content-carrousel figure:nth-child(7) {
+                            transform: rotateY(240deg) translateZ(300px);
+                        }
+
+                        .content-carrousel figure:nth-child(8) {
+                            transform: rotateY(280deg) translateZ(300px);
+                        }
+
+                        .content-carrousel figure:nth-child(9) {
+                            transform: rotateY(320deg) translateZ(300px);
+                        }
+
+                        .content-carrousel figure:nth-child(10) {
+                            transform: rotateY(360deg) translateZ(300px);
+                        }
+
+                .shadow {
+                    position: absolute;
+                    box-shadow: 0px 0px 20px 0px #000;
+                    border-radius: 1px;
+                }
+
+                .content-carrousel img {
+                    image-rendering: auto;
+                    transition: all 300ms;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                    .content-carrousel img:hover {
+                        transform: scale(1.2);
+                        transition: all 300ms;
+                    }
+
+                @keyframes rotar {
+                    from {
+                        transform: rotateY(0deg);
+                    }
+
+                    to {
+                        transform: rotateY(360deg);
+                    }
+                }
+            </style>
+
         </div>
     </div>
 
@@ -59,6 +269,7 @@
     </div>
 
 
+
     <!-- Main -->
     <div id="main-wrapper">
         <div class="container">
@@ -66,162 +277,58 @@
                 <div class="col-8 col-12-medium">
                     <div id="content">
 
+
+
                         <!-- Content -->
                         <article>
 
                             <h2>Pushing the Boundaries of Possibility</h2>
+                            <!-- 3D Slideshow Section -->
+                            <section id="slideshow">
+                                <div class="entire-content">
+                                    <div class="content-carrousel">
+                                        <figure class="shadow"><img src="images/SLIDE.jpg" /></figure>
+                                        <figure class="shadow"><img src="images/SLIDE1.jpg" /></figure>
+                                        <figure class="shadow"><img src="images/SLIDE2.jpeg" /></figure>
+                                        <figure class="shadow"><img src="images/SLIDE3.jpg" /></figure>
+                                        <figure class="shadow"><img src="images/SLIDE4.jpeg" /></figure>
+                                        <figure class="shadow"><img src="images/slide6.jpg" /></figure>
+                                        <figure class="shadow"><img src="images/slide7.jpg" /></figure>
+                                        <figure class="shadow"><img src="images/smart3.gif" /></figure>
+                                        <figure class="shadow"><img src="images/inno.jpg" /></figure>
+                                    </div>
+                                </div>
+                            </section>
 
                             <p>Innovation is the heartbeat of Syntax Housing Solution. We believe in pushing the boundaries of conventional wisdom to create housing solutions that challenge norms and exceed expectations. Our platform is a testament to human ingenuity, where groundbreaking ideas evolve into practical realities.</p>
 
                             <h2>Architectural Marvels</h2>
                             <p>Witness architectural wonders that seamlessly blend aesthetics with functionality. From modular designs to adaptive reuse concepts, our showcased projects redefine what's possible in the realm of affordable housing.</p>
-
+                            <iframe width="560" src="https://www.youtube.com/embed/m0mVf4Av90w"></iframe>
+                            <br><br />
                             <h2>Engineering Feats</h2>
                             <p> Delve into engineering innovations that optimize space, resources, and energy efficiency. Discover how cutting-edge technologies are harnessed to create sustainable and cost-effective housing solutions.	</p>
+                            <iframe width="560" src="https://www.youtube.com/embed/wPaDqzWSco0"></iframe>
 
                         </article>
 
                     </div>
                 </div>
 
-                <style>
-                    * {
-                        box-sizing: border-box;
-                    }
 
-                    body {
-                        font-family: Verdana, sans-serif;
-                    }
 
-                    .mySlides {
-                        display: none;
-                    }
 
-                    img {
-                        vertical-align: middle;
-                    }
 
-                    /* Slideshow container */
-                    .slideshow-container {
-                        max-width: 1000px;
-                        position: relative;
-                        margin: auto;
-                    }
 
-                    /* Caption text */
-                    .text {
-                        color: #f2f2f2;
-                        font-size: 15px;
-                        padding: 8px 12px;
-                        position: absolute;
-                        bottom: 8px;
-                        width: 100%;
-                        text-align: center;
-                    }
 
-                    /* Number text (1/3 etc) */
-                    .numbertext {
-                        color: #f2f2f2;
-                        font-size: 12px;
-                        padding: 8px 12px;
-                        position: absolute;
-                        top: 0;
-                    }
-
-                    /* The dots/bullets/indicators */
-                    .dot {
-                        height: 15px;
-                        width: 15px;
-                        margin: 0 2px;
-                        background-color: #bbb;
-                        border-radius: 50%;
-                        display: inline-block;
-                        transition: background-color 0.6s ease;
-                    }
-
-                    .active {
-                        background-color: #717171;
-                    }
-
-                    /* Fading animation */
-                    .fade {
-                        animation-name: fade;
-                        animation-duration: 1.5s;
-                    }
-
-                    @keyframes fade {
-                        from {
-                            opacity: .4
-                        }
-
-                        to {
-                            opacity: 1
-                        }
-                    }
-
-                    /* On smaller screens, decrease text size */
-                    @media only screen and (max-width: 300px) {
-                        .text {
-                            font-size: 11px
-                        }
-                    }
-                </style>
-                </head>
-                <body>
-
-                    <div class="slideshow-container">
-
-                        <div class="mySlides fade">
-                            <div class="numbertext">1 / 2</div>
-                            <img src="images/SLIDE.jpg" style="width:100%">
-                        </div>
-
-                        <div class="mySlides fade">
-                            <div class="numbertext">2 / 3</div>
-                            <img src="images/SLIDE1.jpg" style="width:100%">
-                        </div>
-
-                        <div class="mySlides fade">
-                            <div class="numbertext">3 / 3</div>
-                            <img src="images/SLIDE4.jpg" style="width:100%">
-                        </div>
-                        <div class="mySlides fade">
-                            <div class="numbertext">3 / 4</div>
-                            <img src="images/SLIDE3.jpg" style="width:100%">
-                        </div>
-
-                    </div>
-                    <br>
-
-                    <div style="text-align:center">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
+                <div class="dot-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
 
-            <script>
-                let slideIndex = 0;
-                showSlides();
-
-                function showSlides() {
-                    let i;
-                    let slides = document.getElementsByClassName("mySlides");
-                    let dots = document.getElementsByClassName("dot");
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    slideIndex++;
-                    if (slideIndex > slides.length) { slideIndex = 1 }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                    setTimeout(showSlides, 3000); // Change image every 2 seconds
-                }
-            </script>
 
 
 
@@ -231,119 +338,37 @@
                     <!-- Sidebar -->
                     <section>
                         <BR><BR><BR>
-                        <h2>SUSTAINABILITY</h2>
-                        <p>Syntax Housing Solution believes in building not only for today, but also for future generations. Sustainability is at the heart of everything we do, as we try to reduce environmental effect while maximizing community well-being.</p>
+                        <h2>Sustainability</h2>
+                        <p>Syntax Housing Solutions prioritizes the incorporation of sustainability into housing solutions. Our core belief is to construct not just for the present but also for the prosperity of forthcoming generations. Central to our approach is a commitment to sustainability, where we strive to curtail environmental impact while simultaneously enhancing the welfare of communities.</p>
 
-                        <p>Green Initiatives - Green Initiatives Look into initiatives that use renewable energy, smart technologies, and eco-friendly materials to create harmonious living spaces that are kind on the environment.</p>
-                        <p>Discover how our featured projects contribute to the social fabric of communities by developing a sense of belonging and supporting a sustainable way of life.</p>
-                        <p>Join us as we reimagine affordable housing through innovation, sustainability, and innovative design. Syntax Housing Solution is more than just a platform; it is a movement aimed at shaping a future in which everyone has access to dignified, pleasant, and sustainable living places.</p>
+                        <p>Our emphasis on green initiatives involves the exploration of strategies that harness renewable energy, intelligent technologies, and environmentally conscious materials. By adopting these approaches, we aim to craft living spaces that are in harmony with the environment, fostering a sustainable coexistence.</p>
+                        <p></p>
+
                         <footer>
+
+
+                            <div class="slider">
+                                <span id="slide-1"></span>
+                                <span id="slide-2"></span>
+                                <span id="slide-3"></span>
+                                <div class="image-container">
+                                    <img src="images/SLIDE4.jpeg" class="slide" width="500" height="308 " />
+                                    <img src="images/SLIDE1.jpg" class="slide" width="500" height="308" />
+                                    <img src="images/SLIDE3.jpg" class="slide" width="500" height="308" />
+                                </div>
+                                <div class="buttons">
+                                    <a href="#slide-1"></a>
+                                    <a href="#slide-2"></a>
+                                    <a href="#slide-3"></a>
+                                </div>
+                            </div>
+
                             <a href="#" class="button icon solid fa-info-circle">Find out more</a>
                         </footer>
                     </section>
 
-                    <h2 id="demo01"></h2>
-                    <div class="hover01 column">
-                        <div>
-                            <figure><img src="images/slide5.jpg" /></figure>
-                            <span>Hover</span>
-                        </div>
-                        <div>
-                            <figure><img src="images/slide7.jpg" /></figure>
-                            <span>Hover</span>
-                        </div>
-                        <div>
-                            <figure><img src="images/slide8.jpg" /></figure>
-                            <span>Hover</span>
-                        </div>
-                    </div>
 
-                    <style>
-                        .column {
-                            margin: 15px 15px 0;
-                            padding: 0;
-                        }
 
-                            .column:last-child {
-                                padding-bottom: 60px;
-                            }
-
-                            .column::after {
-                                content: '';
-                                clear: both;
-                                display: block;
-                            }
-
-                            .column div {
-                                position: relative;
-                                float: left;
-                                width: 300px;
-                                height: 200px;
-                                margin: 0 0 0 25px;
-                                padding: 0;
-                            }
-
-                                .column div:first-child {
-                                    margin-left: 0;
-                                }
-
-                                .column div span {
-                                    position: absolute;
-                                    bottom: -20px;
-                                    left: 0;
-                                    z-index: -1;
-                                    display: block;
-                                    width: 300px;
-                                    margin: 0;
-                                    padding: 0;
-                                    color: #444;
-                                    font-size: 18px;
-                                    text-decoration: none;
-                                    text-align: center;
-                                    -webkit-transition: .3s ease-in-out;
-                                    transition: .3s ease-in-out;
-                                    opacity: 0;
-                                }
-
-                        figure {
-                            width: 300px;
-                            height: 200px;
-                            margin: 0;
-                            padding: 0;
-                            background: #fff;
-                            overflow: hidden;
-                        }
-
-                            figure:hover + span {
-                                bottom: -36px;
-                                opacity: 1;
-                            }
-
-                        /* Zoom In #1 */
-                        .hover01 figure img {
-                            -webkit-transform: scale(1);
-                            transform: scale(1);
-                            -webkit-transition: .3s ease-in-out;
-                            transition: .3s ease-in-out;
-                        }
-
-                        .hover01 figure:hover img {
-                            -webkit-transform: scale(1.3);
-                            transform: scale(1.3);
-                        }
-                        /* Zoom Out #1 */
-                        .hover03 figure img {
-                            -webkit-transform: scale(1.5);
-                            transform: scale(1.5);
-                            -webkit-transition: .3s ease-in-out;
-                            transition: .3s ease-in-out;
-                        }
-
-                        .hover03 figure:hover img {
-                            -webkit-transform: scale(1);
-                            transform: scale(1);
-                        }
-                    </style>
 
 
                     <section>
@@ -359,73 +384,79 @@
                         </ul>
                     </section>
 
+                    <div class="container">
+                        <h2>Video documentations from other perspective</h2>
+                        <iframe width="560" src="https://www.youtube.com/embed/2cjPgNBNeLU"></iframe>
+                        <iframe width="560" src="https://www.youtube.com/embed/B8kyrIQCFXQ"></iframe>
+                    </div>
+
+                    <div class="container">
+                        <iframe width="560" src="https://www.youtube.com/embed/K4hR6YmWIeg"></iframe>
+                        <iframe width="560" src="https://www.youtube.com/embed/6cgTF_uPd0E"></iframe>
+                    </div>
+                    <br>
+                    <h1>Join us as we reimagine affordable housing through innovation, sustainability, and innovative design. Syntax Housing Solution is more than just a platform; it is a movement aimed at shaping a future in which everyone has access to dignified, pleasant, and sustainable living places.</h1>
+
                 </div>
             </div>
         </div>
     </div>
-    </div>
 
-    <!-- Footer -->
-    <div id="footer-wrapper">
-        <footer id="footer" class="container">
+
+
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
             <div class="row">
-                <div class="col-3 col-6-medium col-12-small">
-
-                    <!-- Links -->
-                    <section class="widget links">
-                        <h3>SYNTAX</h3>
-                        <p>
-                            2600 BAGUIO, CITY<br />
-                            NORTH CAMBRIDGE<br />
-                            0977 404 1236
-                        </p>
-                    </section>
-
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">At Syntax Housing Solution, we're reshaping housing landscapes. Our platform showcases architectural brilliance and engineering excellence, redefining comfortable and sustainable living. The Syntax Team's dedication to sparking housing dialogues is at the core. Explore curated content by experts passionate about shelter's future. Join us on this journey to discover what's new, possible, and necessary in housing solutions.</p>
                 </div>
-                <div class="col-3 col-6-medium col-12-small">
 
-                    <!-- Links -->
-                    <section class="widget links">
-                        <h3>SLU</h3>
-                        <p>
-                            2600 BAGUIO, CITY<br />
-                            NORTH CAMBRIDGE<br />
-                            0977 404 1236
-                        </p>
-                    </section>
 
-                </div>
-                <div class="col-3 col-6-medium col-12-small">
 
-                    <!-- Links -->
-                    <section class="widget links">
-                        <h3>HOUSING SOLUTIONS</h3>
-                        <p>
-                            2600 BAGUIO, CITY<br />
-                            NORTH CAMBRIDGE<br />
-                            0977 404 1236
-                        </p>
+                <p class="copyright-text">
+                    Copyright &copy; 2023 All Rights Reserved by
+                    <a href="#">SYNTAX</a>.
+                </p>
 
-                    </section>
-
-                </div>
-                <div class="col-3 col-6-medium col-12-small">
-
-                    <!-- Contact -->
-                    <section class="widget contact">
-                        <h3>CONTACT US</h3>
-                        <p>
-                            2600 BAGUIO, CITY<br />
-                            NORTH CAMBRIDGE<br />
-                            0977 404 1236
-                        </p>
-                    </section>
-
-                </div>
             </div>
-        </footer>
+            <div class="container">
+                <div class="footer-cta pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cta-text">
+                                    <h4>Find us</h4>
+                                    <span>Bareng Drive Baguio, City</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-phone"></i>
+                                <div class="cta-text">
+                                    <h4>Call us</h4>
+                                    <span>09774041236</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="far fa-envelope-open"></i>
+                                <div class="cta-text">
+                                    <h4>Mail us</h4>
+                                    <span>Sdawg4645@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
 
 
 </body>
+
 </html>
