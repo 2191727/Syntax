@@ -53,6 +53,137 @@
                     background-size: cover;
                 }
 
+             
+
+                ul.slides {
+                    display: block;
+                    position: relative;
+                    height: 600px;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    list-style: none;
+                }
+
+                .slides * {
+                    user-select: none;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -khtml-user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-touch-callout: none;
+                }
+
+                ul.slides input {
+                    display: none;
+                }
+
+
+                .slide-container {
+                    display: block;
+                    
+                }
+
+                .slide-image {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    opacity: 0;
+                    transition: all .7s ease-in-out;
+                }
+
+                    .slide-image img {
+                        width: auto;
+                        min-width: 100%;
+                        height: 100%;
+                    }
+
+                .carousel-controls {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 999;
+                    font-size: 100px;
+                    line-height: 600px;
+                    color: #fff;
+                }
+
+                    .carousel-controls label {
+                        display: none;
+                        position: absolute;
+                        padding: 0 20px;
+                        opacity: 0;
+                        transition: opacity .2s;
+                        cursor: pointer;
+                    }
+
+                .slide-image:hover + .carousel-controls label {
+                    opacity: 0.5;
+                }
+
+                .carousel-controls label:hover {
+                    opacity: 1;
+                }
+
+                .carousel-controls .prev-slide {
+                    width: 49%;
+                    text-align: left;
+                    left: 0;
+                }
+
+                .carousel-controls .next-slide {
+                    width: 49%;
+                    text-align: right;
+                    right: 0;
+                }
+
+                .carousel-dots {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 20px;
+                    z-index: 999;
+                    text-align: center;
+                }
+
+                    .carousel-dots .carousel-dot {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        opacity: 0.5;
+                        margin: 10px;
+                    }
+
+                input:checked + .slide-container .slide-image {
+                    opacity: 1;
+                    transform: scale(1);
+                    transition: opacity 1s ease-in-out;
+                }
+
+                input:checked + .slide-container .carousel-controls label {
+                    display: block;
+                }
+
+                input#img-1:checked ~ .carousel-dots label#img-dot-1,
+                input#img-2:checked ~ .carousel-dots label#img-dot-2,
+                input#img-3:checked ~ .carousel-dots label#img-dot-3,
+                input#img-4:checked ~ .carousel-dots label#img-dot-4,
+                input#img-5:checked ~ .carousel-dots label#img-dot-5,
+                input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+                    opacity: 1;
+                }
+
+
+                input:checked + .slide-container .nav label {
+                    display: block;
+                }
+
+
 
 
                 .slider {
@@ -109,155 +240,7 @@
                         border-radius: 50px;
                         background-color: lightgreen;
                     }
-                /* 3D Slideshow */
-
-
-                #slideshow {
-                    margin: 0 auto;
-                    padding-top: 50px;
-                    height: 600px;
-                    width: 100%;
-                    box-sizing: border-box;
-                }
-
-                .sub-heading {
-                    padding-top: 50px;
-                    font-size: 18px;
-                }
-
-                .sub-heading-two {
-                    font-size: 15px;
-                }
-
-                .sub-heading-three {
-                    font-size: 13px;
-                }
-
-                .sub-heading-four {
-                    font-size: 11px;
-                }
-
-                .sub-heading-five {
-                    font-size: 9px;
-                }
-
-                .sub-heading-six {
-                    font-size: 7px;
-                }
-
-                .sub-heading-seven {
-                    font-size: 5px;
-                }
-
-                .sub-heading-eight {
-                    font-size: 3px;
-                }
-
-                .sub-heading-nine {
-                    font-size: 1px;
-                }
-
-                /* ... (other styles) ... */
-
-                .entire-content {
-                    margin: auto;
-                    width: 190px;
-                    perspective: 1000px;
-                    position: relative;
-                    padding-top: 80px;
-                }
-
-                .content-carrousel {
-                    width: 100%;
-                    position: absolute;
-                    float: right;
-                    animation: rotar 15s infinite linear;
-                    transform-style: preserve-3d;
-                    /* Add the following line to apply the animation */
-                    animation: rotar 15s infinite linear;
-                }
-
-
-                    .content-carrousel:hover {
-                        animation-play-state: paused;
-                        cursor: pointer;
-                    }
-
-                    .content-carrousel figure {
-                        width: 100%;
-                        height: 120px;
-                        border: 1px solid #3b444b;
-                        overflow: hidden;
-                        position: absolute;
-                    }
-
-                        .content-carrousel figure:nth-child(1) {
-                            transform: rotateY(0deg) translateZ(300px);
-                        }
-
-                        .content-carrousel figure:nth-child(2) {
-                            transform: rotateY(40deg) translateZ(300px);
-                        }
-
-                        .content-carrousel figure:nth-child(3) {
-                            transform: rotateY(80deg) translateZ(300px);
-                        }
-
-                        .content-carrousel figure:nth-child(4) {
-                            transform: rotateY(120deg) translateZ(300px);
-                        }
-
-                        .content-carrousel figure:nth-child(5) {
-                            transform: rotateY(160deg) translateZ(300px);
-                        }
-
-                        .content-carrousel figure:nth-child(6) {
-                            transform: rotateY(200deg) translateZ(300px);
-                        }
-
-                        .content-carrousel figure:nth-child(7) {
-                            transform: rotateY(240deg) translateZ(300px);
-                        }
-
-                        .content-carrousel figure:nth-child(8) {
-                            transform: rotateY(280deg) translateZ(300px);
-                        }
-
-                        .content-carrousel figure:nth-child(9) {
-                            transform: rotateY(320deg) translateZ(300px);
-                        }
-
-                        .content-carrousel figure:nth-child(10) {
-                            transform: rotateY(360deg) translateZ(300px);
-                        }
-
-                .shadow {
-                    position: absolute;
-                    box-shadow: 0px 0px 20px 0px #000;
-                    border-radius: 1px;
-                }
-
-                .content-carrousel img {
-                    image-rendering: auto;
-                    transition: all 300ms;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                    .content-carrousel img:hover {
-                        transform: scale(1.2);
-                        transition: all 300ms;
-                    }
-
-                @keyframes rotar {
-                    from {
-                        transform: rotateY(0deg);
-                    }
-
-                    to {
-                        transform: rotateY(360deg);
-                    }
-                }
+             
             </style>
 
         </div>
@@ -283,32 +266,72 @@
                         <article>
 
                             <h2>Pushing the Boundaries of Possibility</h2>
-                            <!-- 3D Slideshow Section -->
-                            <section id="slideshow">
-                                <div class="entire-content">
-                                    <div class="content-carrousel">
-                                        <figure class="shadow"><img src="images/SLIDE.jpg" /></figure>
-                                        <figure class="shadow"><img src="images/SLIDE1.jpg" /></figure>
-                                        <figure class="shadow"><img src="images/SLIDE2.jpeg" /></figure>
-                                        <figure class="shadow"><img src="images/SLIDE3.jpg" /></figure>
-                                        <figure class="shadow"><img src="images/SLIDE4.jpeg" /></figure>
-                                        <figure class="shadow"><img src="images/slide6.jpg" /></figure>
-                                        <figure class="shadow"><img src="images/slide7.jpg" /></figure>
-                                        <figure class="shadow"><img src="images/smart3.gif" /></figure>
-                                        <figure class="shadow"><img src="images/inno.jpg" /></figure>
+
+                            <div class="container">
+                                <div>
+                                    <div class="container">
+                                        <ul class="slides">
+                                            <input type="radio" name="radio-buttons" id="img-1" checked />
+                                            <li class="slide-container">
+                                                <div class="slide-image">
+                                                    <img src="images/inoov.jpg">
+                                                </div>
+                                                <div class="carousel-controls">
+                                                    <label for="img-3" class="prev-slide">
+                                                        <span>&lsaquo;</span>
+                                                    </label>
+                                                    <label for="img-2" class="next-slide">
+                                                        <span>&rsaquo;</span>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <input type="radio" name="radio-buttons" id="img-2" />
+                                            <li class="slide-container">
+                                                <div class="slide-image">
+                                                    <img src="images/inn1.jpg">
+                                                </div>
+                                                <div class="carousel-controls">
+                                                    <label for="img-1" class="prev-slide">
+                                                        <span>&lsaquo;</span>
+                                                    </label>
+                                                    <label for="img-3" class="next-slide">
+                                                        <span>&rsaquo;</span>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <input type="radio" name="radio-buttons" id="img-3" />
+                                            <li class="slide-container">
+                                                <div class="slide-image">
+                                                    <img src="images/innovv.jpg">
+                                                </div>
+                                                <div class="carousel-controls">
+                                                    <label for="img-2" class="prev-slide">
+                                                        <span>&lsaquo;</span>
+                                                    </label>
+                                                    <label for="img-1" class="next-slide">
+                                                        <span>&rsaquo;</span>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <div class="carousel-dots">
+                                                <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                                                <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                                                <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                                            </div>
+                                        </ul>
                                     </div>
                                 </div>
-                            </section>
+                                <br />
 
-                            <p>Innovation is the heartbeat of Syntax Housing Solution. We believe in pushing the boundaries of conventional wisdom to create housing solutions that challenge norms and exceed expectations. Our platform is a testament to human ingenuity, where groundbreaking ideas evolve into practical realities.</p>
+                                <p>Innovation is the heartbeat of Syntax Housing Solution. We believe in pushing the boundaries of conventional wisdom to create housing solutions that challenge norms and exceed expectations. Our platform is a testament to human ingenuity, where groundbreaking ideas evolve into practical realities.</p>
 
-                            <h2>Architectural Marvels</h2>
-                            <p>Witness architectural wonders that seamlessly blend aesthetics with functionality. From modular designs to adaptive reuse concepts, our showcased projects redefine what's possible in the realm of affordable housing.</p>
-                            <iframe width="560" src="https://www.youtube.com/embed/m0mVf4Av90w"></iframe>
-                            <br><br />
-                            <h2>Engineering Feats</h2>
-                            <p> Delve into engineering innovations that optimize space, resources, and energy efficiency. Discover how cutting-edge technologies are harnessed to create sustainable and cost-effective housing solutions.	</p>
-                            <iframe width="560" src="https://www.youtube.com/embed/wPaDqzWSco0"></iframe>
+                                <h2>Architectural Marvels</h2>
+                                <p>Witness architectural wonders that seamlessly blend aesthetics with functionality. From modular designs to adaptive reuse concepts, our showcased projects redefine what's possible in the realm of affordable housing.</p>
+                                <iframe width="560" src="https://www.youtube.com/embed/m0mVf4Av90w"></iframe>
+                                <br><br />
+                                <h2>Engineering Feats</h2>
+                                <p> Delve into engineering innovations that optimize space, resources, and energy efficiency. Discover how cutting-edge technologies are harnessed to create sustainable and cost-effective housing solutions.	</p>
+                                <iframe width="560" src="https://www.youtube.com/embed/wPaDqzWSco0"></iframe>
 
                         </article>
 
