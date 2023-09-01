@@ -202,6 +202,7 @@ input, select, textarea {
 		justify-content: space-between; 
 		align-items: flex-start; 
 		margin: 20px; 
+		flex-wrap: wrap;
 	}
 	.member {
 		width: calc(50% - 10px); 
@@ -226,6 +227,18 @@ input, select, textarea {
 	.member p {
  		margin: 0;
 	}
+
+	  
+	  .member {
+		width: calc(50% - 20px); /* Adjust for margin */
+  		margin-bottom: 20px;
+  		background-color: #f5f5f5;
+  		border: 1px solid #ddd;
+  		padding: 20px;
+  		text-align: center;
+  		border-radius: 10px;
+  		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	  }
 	  
 
 		@media screen and (max-width: 1680px) {
@@ -234,31 +247,16 @@ input, select, textarea {
 				width: 1200px;
 			}
 
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			.container {
-				width: 960px;
+			.member-container{
+				width: 100%;
 			}
 
-		}
-
-		@media screen and (max-width: 980px) {
-
-			.container {
-				width: 90%;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.container {
+			.member{
 				width: 100%;
 			}
 
 		}
+
 
 /* Row */
 
@@ -1611,7 +1609,7 @@ input, select, textarea {
 		table thead {
 			background: #404248;
 			color: #fff;
-		}
+		}		  
 
 /* Image */
 
@@ -1634,11 +1632,6 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 2.5em 0;
-		}
-		.image.members{
-			display: flex;
-			width: 20%;
 			margin: 0 0 2.5em 0;
 		}
 
@@ -1814,6 +1807,23 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
+			@media screen and (max-width: 1680px) {
+
+				ul.menu{
+					width: 100%;
+				}
+
+				ul.menu li{
+					width: 100%;
+				}
+
+				ul.menu li:first-child{
+					width: 100%;
+				}
+		
+				}
+		
+
 /* Box */
 
 	.box {
@@ -1970,6 +1980,15 @@ input, select, textarea {
 		position: relative;
 	}
 
+	@media screen and (max-width: 1680px) {
+
+		#header{
+			width: 100%;
+		}
+
+		}
+
+
 /* Logo */
 
 	#logo {
@@ -1982,6 +2001,14 @@ input, select, textarea {
 			height: 100px;
 			padding: 0.25em 0.2em 0.25em 0.2em;
 			vertical-align: middle;
+		}
+
+		@media screen and (max-width: 1680px) {
+
+		#logo{
+			width: 100%;
+		}
+
 		}
 
 /* Nav */
@@ -2034,6 +2061,42 @@ input, select, textarea {
 					color: #fff;
 				}
 
+
+@media screen and (max-width: 1680){
+	#nav {
+		width: 100%;
+		}
+				
+		#nav ul {
+		width: 100%;
+		}
+				
+		#nav ul li {
+		width: 100%;
+		}
+				
+		#nav ul li a, #nav ul li span {
+		width: 100%;
+		}
+				
+		#nav ul li > ul {
+		width: 100%;
+		}
+		
+		#nav ul li:hover a, #nav ul li:hover span {
+		width: 100%;
+		}
+				
+		#nav ul li.active a, #nav ul li.active span {
+		width: 100%;
+		}
+				
+		#nav ul li.current a {
+		width: 100%;
+		}
+				
+				}
+
 /* Style the dropdown submenu */
 #nav #dropdown ul {
     display: none;
@@ -2060,6 +2123,32 @@ input, select, textarea {
 
 #nav #dropdown ul li a:hover {
     background-color: #555;
+}
+
+@media screen and (max-width: 1680){
+	#nav #dropdown ul{
+	width: 100%;
+	}
+
+	#nav #dropdown:hover > ul {
+	width: 100%;
+	}
+
+	#nav #dropdown ul li a {
+	width: 100%;
+	}
+
+	#nav #dropdown ul li {
+	width: 100%;
+	}
+
+	#nav ul li > ul {
+	width: 100%;
+	}
+
+	#nav #dropdown ul li a:hover {
+	width: 100%;
+	}
 }
 
 /* Banner */
