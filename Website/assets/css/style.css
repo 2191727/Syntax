@@ -2469,6 +2469,10 @@ ul.actions {
         margin-bottom: 0 !important;
     }
 
+    #content h2{
+        color: pink;
+    }
+
         #content > :last-child {
             margin-bottom: 0 !important;
         }
