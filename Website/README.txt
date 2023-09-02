@@ -1,6 +1,7 @@
 This website is made by the Team Syntax
+by, Kristine, allan, Vinz and Odeneil
 
-We used html5, css3 and more.
+We used html5, css3 and some webfonts.
 
 Credits:
 	Icons:
