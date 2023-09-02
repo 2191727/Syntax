@@ -1580,7 +1580,25 @@ table {
         color: #fff;
     }
 
-    table.table-chart {
+    @media(max-width: 480px){
+        #stat-table {
+            overflow-x : auto;
+        }
+
+        table.table-chart caption{
+            font-size: 11pt;
+        }
+        table.table-chart tbody{
+            font-size: 9pt;
+            line-height: 9pt;
+        }
+        table.table-chart tfoot{
+            font-size: 9pt;
+        }
+    }
+
+    @media (min-width: 481px) {
+        table.table-chart {
         text-align: left;
         position: relative;
         border-collapse: collapse;
@@ -1602,16 +1620,16 @@ table {
             padding: 10px;
         }
 
-.primary {
-    background-color: #000000;
-}
+    .primary {
+        background-color: #000000;
+        }
 
-table.table-chart tfoot > tr {
-    background: rgb(0, 0, 0);
-    color: white;
-    font-size: 12pt;
-    line-height: 1.5;
-}
+    table.table-chart tfoot > tr {
+        background: rgb(0, 0, 0);
+        color: white;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
 
     table.table-chart tfoot > tr > th > ul {
         text-align: left;
@@ -1621,14 +1639,21 @@ table.table-chart tfoot > tr {
         color: white;
     }
 
-table.table-chart tbody > tr:hover {
-    background-color: #ecd99f;
+    table.table-chart tbody > tr:hover {
+        background-color: #ecd99f;
+    }
+
+    table.table-chart caption {
+        color: black;
+        font-size: 24pt;
+    }
+
+    table.table-chart tbody {
+        color: black;
+    }
 }
 
-table.table-chart caption {
-    color: black;
-    font-size: 24pt;
-}
+    
 
 .graph {
     margin-bottom: 10em;
@@ -1636,13 +1661,25 @@ table.table-chart caption {
 }
 
     .graph caption {
-        font: bold 150%/120% arial, helvetica, sans-serif;
+        font: bold 120%/90% arial, helvetica, sans-serif;
         padding-bottom: 0.33em;
-    }
 
+    }
     .graph tbody th {
         text-align: right;
+        font-size: 9pt;
     }
+    .graph tbody td{
+        font-size: 9pt;
+    }
+    .graph thead tr th{
+        font-size: 10pt;
+    }
+    .graph tfoot tr th{
+        font-size: 9pt;
+        text-align: left;
+    }
+
 
 @supports (display: grid) {
 }
@@ -1657,6 +1694,9 @@ table.table-chart caption {
 
         .graph caption {
             display: block;
+            font: bold 150%/120% arial, helvetica, sans-serif;
+            padding-bottom: 0.33em;
+            color:#000000;    
         }
 
         .graph thead {
@@ -1766,6 +1806,7 @@ table.table-chart caption {
         .graph > tfoot {
             line-height: 12pt;
             font-size: small;
+            color: #000000;
         }
 }
 
