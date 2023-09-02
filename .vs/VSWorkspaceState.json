@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Website",
-    "\\Website\\assets"
+    "\\Website\\assets",
+    "\\Website\\assets\\css",
+    "\\Website\\assets\\sass"
   ],
-  "SelectedNode": "\\Website\\HTMLPage2.html",
+  "SelectedNode": "\\Website\\assets\\css\\style.css",
   "PreviewInSolutionExplorer": false
 }
