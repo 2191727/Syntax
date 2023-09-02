@@ -30,6 +30,35 @@
                 </nav>
 
             </header>
+
+            <style>
+
+
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+            .image img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .image:hover img {
+                transform: scale(1.1);
+            }
+    </style>
         </div>
     </div>
      <img src="images/cover9.jpg" alt="Nature" class="responsive" width="600" height="400">
