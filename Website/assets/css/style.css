@@ -56,6 +56,11 @@ input, select, textarea {
     appearance: none;
 }
 
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
 .bigpic {
     position: relative;
     width: 100%;
