@@ -253,13 +253,34 @@ p, ul, ol, dl, table {
         color: white;
     }
 
+    .title{
+        color: pink;
+    }
+
     .member-container {
+        background-color: #333;
+        width: 100%;
+        
+    }
+    .member-title{
+        color: pink;
+    }
+
+
+    .member {
+        color: white;
+        background-color: #333;
         width: 100%;
     }
 
-    .member {
-        width: 100%;
+    .member p, b{
+        color: #00c59a;
     }
+    .member h3,h4{
+        color: pink;
+    }
+
+    
 }
 
 .row {
@@ -1428,6 +1449,7 @@ p, ul, ol, dl, table {
                 }
 
     .row {
+        
         margin-top: -20px;
         margin-left: -20px;
     }
@@ -2219,6 +2241,7 @@ ul.actions {
     }
 
 .site-footer .social-icons {
+    
     text-align: right;
 }
 
@@ -2233,6 +2256,8 @@ ul.actions {
     }
 
 .copyright-text {
+    color: skyblue;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
@@ -2248,6 +2273,8 @@ ul.actions {
     }
 
         .site-footer .copyright-text, .site-footer .social-icons {
+            color: skyblue;
+            font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
 }
@@ -2255,6 +2282,7 @@ ul.actions {
 #copyright {
     color: #aaa;
     padding: 4em 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
@@ -2264,6 +2292,7 @@ ul.actions {
 
 @media screen and (max-width: 1680px) {
     body, input, select, textarea {
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 12pt;
     }
 
@@ -2274,6 +2303,7 @@ ul.actions {
         background-color: #333;
         color: #fff;
         padding: 15px;
+        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
     }
 
@@ -2284,6 +2314,7 @@ ul.actions {
             background-color: #fff;
             color: #fff;
             padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
 
@@ -2328,6 +2359,7 @@ ul.actions {
 
 @media screen and (max-width: 1280px) {
     body, input, select, textarea {
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 11pt;
     }
 
@@ -2338,6 +2370,7 @@ ul.actions {
         background-color: #333;
         color: #fff;
         padding: 15px;
+        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
     }
 }
@@ -2351,6 +2384,7 @@ ul.actions {
     body, input, select, textarea {
         background-color: #333;
         font-size: 11pt;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     section, article {
@@ -2382,6 +2416,7 @@ ul.actions {
     #header-wrapper {
         padding: 3em 0 1em 0;
         text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     #footer-wrapper {
@@ -2405,9 +2440,11 @@ ul.actions {
         color: #fff;
         padding: 15px;
         text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     #banner {
+        font-family: Arial, Helvetica, sans-serif;
         padding: 4.5em 3em;
         text-align: center;
         background-color: #333;
@@ -2441,6 +2478,7 @@ ul.actions {
     }
 
     #copyright {
+        color: skyblue;
         padding: 0;
     }
 
@@ -2454,6 +2492,7 @@ ul.actions {
 @media screen and (max-width: 736px) {
     body, input, select, textarea {
         line-height: 2em;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     h2, h3, h4, h5, h6 {
@@ -2491,6 +2530,7 @@ ul.actions {
         background-color: #333;
         color: #fff;
         padding: 15px;
+        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
         margin-right: 0;
         margin-bottom: 10px;
@@ -2511,7 +2551,7 @@ ul.actions {
                 padding: 30px 15px 30px 15px;
             }
 
-                .box.feature .inner h2, p {
+                .box.feature .inner h2, p, h3 {
                     color: white;
                 }
 
@@ -2555,12 +2595,15 @@ ul.actions {
     }
 
     #banner {
+        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
         padding: 15px 15px 15px 15px;
         margin: 0 auto !important;
     }
 
-        #banner h2 {
+        #banner h2, h3, h4, h5 ,h6 {
+            color: orange;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 2em;
             margin: 0.75em 0 0.5em 0;
         }
@@ -2589,7 +2632,8 @@ ul.actions {
         margin-bottom: 1em !important;
     }
 
-    #copyright {
+    #copyright-text {
+        color: blue;
         text-align: left;
     }
 }
