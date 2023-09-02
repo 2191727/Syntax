@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Website",
+    "\\Website\\assets",
+    "\\Website\\assets\\css"
   ],
-  "SelectedNode": "\\C:\\Users\\Nitro\\Source\\Repos\\Syntax",
+  "SelectedNode": "\\Website\\innovations.html",
   "PreviewInSolutionExplorer": false
 }
